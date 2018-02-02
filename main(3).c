@@ -1,37 +1,24 @@
 #include <stdio.h>
-
-void main()
-
+int main()
 {
+    double firstNumber, secondNumber;
 
-    char string[80];
+    printf("Enter first number: ");
+    scanf("%lf", &firstNumber);
 
-    int count, nc = 0, sum = 0;
+    printf("Enter second number: ");
+    scanf("%lf",&secondNumber);
 
- 
+    // Swapping process
 
-    printf("Enter the string containing both digits and alphabet \n");
+    firstNumber = firstNumber - secondNumber;
+    secondNumber = firstNumber + secondNumber;
+    firstNumber = secondNumber - firstNumber;
 
-    scanf("%s", string);
+    printf("\nAfter swapping, firstNumber = %.2lf\n", firstNumber);
+    printf("After swapping, secondNumber = %.2lf", secondNumber);
 
-    for (count = 0; string[count] != '\0'; count++)
-
-    {
-
-        if ((string[count] >= '0') && (string[count] <= '9'))
-
-        {
-
-            nc += 1;
-
-            sum += (string[count] - '0');
-
-        }
-
-    }
-
-    printf("NO. of Digits in the string = %d\n", nc);
-
-    printf("Sum of all digits = %d\n", sum);
-
+    return 0;
 }
+
+
