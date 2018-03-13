@@ -1,4 +1,4 @@
-#pragma<stdio.h>
+f#pragma<stdio.h>
 main()
 {
 int a,i,count=1;
